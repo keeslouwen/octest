@@ -6,6 +6,10 @@
 FROM rh7tomcat7
  
 MAINTAINER Kees Louwen (kees.louwen@vancis.nl)
+
+ENV CATALINA_HOME /usr/local/tomcat
+ENV PATH $CATALINA_HOME/bin:$PATH
+WORKDIR $CATALINA_HOME
  
 ENV OC_HOME $CATALINA_HOME/webapps/OpenClinica 
 ENV OC_WS_HOME $CATALINA_HOME/webapps/OpenClinica-ws 
